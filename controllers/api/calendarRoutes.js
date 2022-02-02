@@ -22,6 +22,7 @@ router.post('/', async (req, res) => {
       day13: req.body.day13,
       day14: req.body.day14
     });
+    console.log(dbEmployees);
       res.status(200).json(dbEmployees);
     } catch (err) {
     console.log(err);
