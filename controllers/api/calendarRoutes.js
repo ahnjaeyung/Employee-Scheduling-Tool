@@ -24,10 +24,35 @@ router.post('/', async (req, res) => {
     });
     console.log(dbEmployees);
       res.status(200).json(dbEmployees);
+      res.redirect('/calendar');
     } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const dbGalleryData = await Employees.findAll( {
+//       include: [
+//         {
+//           model: Employees,
+//           attributes: [
+//             'firstname',
+//             'lastname',
+//             'day1',
+//           ],
+//         },
+//       ],
+//     });
+
+//     const gallery = dbGalleryData.get({ plain: true });
+//     res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

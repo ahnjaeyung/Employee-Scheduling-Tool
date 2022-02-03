@@ -20,7 +20,6 @@ const availabilityFormHandler = async (event) => {
     const day14 = document.querySelector('#day14').checked;
     
     if (firstName && lastName) {
-        console.log("working");
         const response = await fetch('/api/calendar', {
             method: 'POST',
             body: JSON.stringify({ firstName, lastName, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14 }),

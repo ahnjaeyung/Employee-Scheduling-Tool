@@ -26,6 +26,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/calendar', async (req, res) => {
+  try {
+    res.render('calendarView'
+    // , {// loggedIn: req.session.loggedIn,}
+      );
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // // GET one gallery
 // router.get('/gallery/:id', async (req, res) => {
 //   try {

@@ -25,10 +25,13 @@
     "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "color-calendar": "1.0.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
   },
   "bugs": {
     "url": "https://github.com/karpx033/Employee-Scheduling-Tool/issues"
