@@ -34,34 +34,10 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const dbEmployees = await Employees.findAll( {
-      include: [
-        {
-          model: Employees,
-          attributes: [
-            'firstname',
-            'lastname',
-            'day1',
-            'day2',
-            'day3',
-            'day4',
-            'day5',
-            'day6',
-            'day7',
-            'day8',
-            'day9',
-            'day10',
-            'day11',
-            'day12',
-            'day13',
-            'day14',
-          ],
-        },
-      ],
-    });
-    res.status(200).json(dbEmployees);
-
-    const employees = dbEmployees.get({ plain: true });
+    const dbEmployees = await Employees.findAll();
+    // res.status(200).json(dbEmployees);
+// console.log(dbEmployees);
+    const employees = dbEmployees.map(emp => emp.get({ plain: true }));
     res.render('calendarView', { employees, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
