@@ -1,4 +1,6 @@
-[
+const { Employees } = require('../models');
+
+const employeedata = [
     {
       "firstname": "Sal",
       "lastname": "Goodman",
@@ -71,4 +73,8 @@
         "day13": "false",
         "day14": "false"
       }
-  ]
+  ];
+
+const seedEmployees = () => Employees.bulkCreate(employeedata);
+
+module.exports = seedEmployees;
