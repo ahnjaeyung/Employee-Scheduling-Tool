@@ -32,6 +32,7 @@ const availabilityFormHandler = async (event) => {
         //     alert('Failed to sign up.');
         // }
     }
+    window.location.replace('/calendar')
 };
 
 
