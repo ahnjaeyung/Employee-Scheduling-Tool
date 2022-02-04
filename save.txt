@@ -1,0 +1,27 @@
+var day2Day = document.getElementById("2");
+var day3Day = document.getElementById("3");
+var day4Day = document.getElementById("4");
+var day5Day = document.getElementById("5");
+var day6Day = document.getElementById("6");
+var day7Day = document.getElementById("7");
+var day8Day = document.getElementById("8");
+var day9Day = document.getElementById("9");
+var day10Day = document.getElementById("10");
+var day11Day = document.getElementById("11");
+var day12Day = document.getElementById("12");
+var day13Day = document.getElementById("13");
+var day14Day = document.getElementById("14");
+
+ <th scope="col" id="2">Day 2 Availability</th>
+      <th scope="col" id="3">Day 3 Availability</th>
+      <th scope="col" id="4">Day 4 Availability</th>
+      <th scope="col" id="5">Day 5 Availability</th>
+      <th scope="col" id="6">Day 6 Availability</th>
+      <th scope="col" id="7">Day 7 Availability</th>
+      <th scope="col" id="8">Day 8 Availability</th>
+      <th scope="col" id="9">Day 9 Availability</th>
+      <th scope="col" id="10">Day 10 Availability</th>
+      <th scope="col" id="11">Day 11 Availability</th>
+      <th scope="col" id="12">Day 12 Availability</th>
+      <th scope="col" id="13">Day 13 Availability</th>
+      <th scope="col" id="14">Day 14 Availability</th>

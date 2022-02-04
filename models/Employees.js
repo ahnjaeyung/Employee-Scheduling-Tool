@@ -22,7 +22,8 @@ Employees.init(
     day1: {
        type: DataTypes.BOOLEAN,
        defaultValue: false,
-    }, day2: {
+    }, 
+    day2: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
     }, 
