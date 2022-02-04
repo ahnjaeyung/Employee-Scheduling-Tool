@@ -1,6 +1,6 @@
 const Calendar = require('./Calendar');
 const Employees = require('./Employees');
-const User = require('./UserModels');
+const User = require('./User');
 
 Calendar.hasMany(Employees, {
   foreignKey: 'calendar_id',
