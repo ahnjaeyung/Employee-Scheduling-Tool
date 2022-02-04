@@ -3,6 +3,7 @@ const { Gallery, Painting } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
+
   try {
     // const dbGalleryData = await Gallery.findAll({
     //   include: [
@@ -16,6 +17,10 @@ router.get('/', async (req, res) => {
     // const galleries = dbGalleryData.map((gallery) =>
     //   gallery.get({ plain: true })
     // );
+    if (req.session.loggedIn) {
+      res.redirect('/api/calendar');
+      return;
+    }
     res.render('homepage', {
       // galleries,
       loggedIn: req.session.loggedIn,
