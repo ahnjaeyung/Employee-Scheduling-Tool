@@ -87,7 +87,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/form', (req, res) => {
-  if (req.session.loggedIn) {
+  if (!req.session.loggedIn) {
     res.redirect('/');
     return;
   }
