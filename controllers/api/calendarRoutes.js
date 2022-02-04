@@ -31,22 +31,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-
-// router.get('/', async (req, res) => {
-//   if (!req.session.loggedIn) {
-//     res.redirect('/');
-//     return;
-//   }
-//   try {
-//     const dbEmployees = await Employees.findAll();
-//     // res.status(200).json(dbEmployees);
-// // console.log(dbEmployees);
-//     const employees = dbEmployees.map(emp => emp.get({ plain: true }));
-//     res.render('calendarView', { employees, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
-
 module.exports = router;
