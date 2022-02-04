@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     //   gallery.get({ plain: true })
     // );
     if (req.session.loggedIn) {
-      res.redirect('/api/calendar');
+      res.redirect('/calendar');
       return;
     }
     res.render('homepage', {
