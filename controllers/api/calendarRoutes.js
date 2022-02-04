@@ -33,6 +33,10 @@ router.post('/', async (req, res) => {
 
 
 router.get('/', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
   try {
     const dbEmployees = await Employees.findAll();
     // res.status(200).json(dbEmployees);
