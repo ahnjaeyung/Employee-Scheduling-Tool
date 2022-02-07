@@ -2,18 +2,54 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: url("https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80");
     background-size: cover;
     background-position: center;
+    background: url("https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80");
+    background-size: 100% 100%;
   }
+
+
   .container {
     text-align: center;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     gap: 40px;
+  }
+
+
+.titlename{
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  background-color: #e8e6e9;
+  background-repeat: no-repeat;
+  background: url(https://jamesbeckett.files.wordpress.com/2011/07/rainbow-pattern.jpg);
+  background-blend-mode: exclusion;
+  background-size: 100% 100%;
+  }
+
+  #big {
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Abril Fatface', cursive;
+    color: rgb(25, 115, 231);
+    background-color: #e8e6e9;
+    border: 0px;
+  }
+
+  #bigcontainer {
+    margin-top: 10px;
+    height: 70vh;
+    overflow: scroll;
+  }
+
+  #employeeTable {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
   }
   
   @media screen and (max-width: 650px) {
