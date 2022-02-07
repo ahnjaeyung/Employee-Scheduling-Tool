@@ -21,7 +21,9 @@ var day14Day = document.getElementById("14");
 
 function dateConverter(num) {
     var newDate = new Date();
-    newDate.setDate(newDate.getDate() + num + 6)
+    newDate.setDate(newDate.getDate() + (0 - 1 - newDate.getDay() +7) % 7 + num);
+    console.log(newDate);
+    // newDate.setDate(newDate.getDate() + num + 6)
     var month = newDate.getMonth() + 1;
     var day = newDate.getDate();
     return ` ${month}/${day}`;
