@@ -49,7 +49,10 @@ router.get('/form', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('form');
+  res.render('form', {
+    loggedIn: req.session.loggedIn,
+  }
+  );
 });
 
 module.exports = router;
