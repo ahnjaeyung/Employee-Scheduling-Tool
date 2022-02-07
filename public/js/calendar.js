@@ -1,21 +1,19 @@
 let calA = new Calendar({
   id: "#calendar-a",
   theme: "basic",
-  // primaryColor: '#FF6E35',
-  // headerBackgroundColor: '#FF6E35',
   border: "5px solid black",
   weekdayType: "long-upper",
   monthDisplayType: "long",
-  headerColor: "yellow",
-  headerBackgroundColor: "black",
+  headerColor: "blue",
+  headerBackgroundColor: "yellow",
   calendarSize: "small",
   layoutModifiers: ["month-left-align"],
   eventsData: [
     {
       id: 1,
       name: "",
-      start: "2022-02-13T06:00:00",
-      end: "2022-02-26T20:30:00"
+      start: dateConverter2(1),
+      end: dateConverter2(14),
     },
   ],
   dateChanged: (currentDate, events) => {
@@ -27,3 +25,13 @@ let calA = new Calendar({
   }
 });
 
+function dateConverter2(num) {
+  var newDate = new Date();
+  newDate.setDate(newDate.getDate() + (0 - 1 - newDate.getDay() +7) % 7 + num);
+  // console.log(newDate);
+  // // newDate.setDate(newDate.getDate() + num + 6)
+  // var month = newDate.getMonth() + 1;
+  // var day = newDate.getDate();
+  // return ` ${month}/${day}`;
+  return newDate;
+  }
